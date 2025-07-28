@@ -3,16 +3,19 @@
 import agendaContatos from "./agendaContatos";
 
 describe(`teste de jobs`, () => {
-  it("Testes dentro de adicionar contato", () => {
+  beforeEach(() => {
     cy.visit("https://agenda-contatos-react.vercel.app/");
+  });
+
+  it("Teste de adicionar contato", () => {
     agendaContatos.AdicionarContato();
   });
 
-  it("teste de editar conttao", () => {
+  it("Teste de editar conttao", () => {
     agendaContatos.EditarContato();
   });
 
-  it("teste de remover contato", () => {
+  it("Teste de remover contato", () => {
     agendaContatos.RemoverContato();
   });
 });
